@@ -1,5 +1,9 @@
+import NewsComponent from "@/components/NewsComponent";
+
 export default function Home() {
   return (
-    <main className=""></main>
+    <>
+      <NewsComponent />
+    </>
   );
 }

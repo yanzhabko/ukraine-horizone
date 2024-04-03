@@ -1,9 +1,13 @@
-import React from 'react'
+import RulesComponent from "@/components/RulesComponent";
+import React from "react";
+import { rules } from "@/data";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <>
+      <RulesComponent rules={rules} />
+    </>
+  );
+};
 
-export default page
+export default page;

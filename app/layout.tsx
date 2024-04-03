@@ -3,6 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import FooterComponent from "@/components/FooterComponent";
 import HeaderComponent from "@/components/HeaderComponent";
+import BackgroundComponent from "@/components/BackgroundComponent";
+import LeftNavigation from "@/components/RightNavigation";
+import { useMediaQuery } from "@mantine/hooks";
+import { ImageProvider } from "@/hook/ImageProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +22,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="keywords"
+          content="ukraine horizon, сервера майкрафт, ураїне хорізон, топ-10 серверів майкрафт"
+        />
+        <meta property="og:image" content="noimageindex" />
+        <link rel="shortcut icon" href="favoicon.ico" />
+      </head>
       <body className={inter.className}>
-        <HeaderComponent />
-        {children}
-        <FooterComponent />
+        <ImageProvider>
+          <HeaderComponent />
+          <BackgroundComponent />
+          <main className="lg:flex container gap-[70px]">
+            <section className="w-full lg:flex-1">{children}</section>
+            <LeftNavigation />
+          </main>
+          <FooterComponent />
+        </ImageProvider>
       </body>
     </html>
   );
