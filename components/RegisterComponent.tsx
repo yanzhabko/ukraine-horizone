@@ -115,14 +115,12 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({ setState }) => {
               type="button"
               className="flex-1"
               onClick={() => setState("login")}
-              image=""
               typeButton="default"
             />
             <ButtonComponent
               title="Регістрація"
               className="flex-1"
               typeButton="default"
-              image=""
             />
           </div>
         </form>
