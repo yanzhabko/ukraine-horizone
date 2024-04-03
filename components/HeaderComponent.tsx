@@ -16,14 +16,14 @@ const HeaderComponent = () => {
   const mobile = useMediaQuery("(max-width:1024px)");
 
   return (
-    <header className="container flex flex-col items-center gap-[80px]">
-      <div className="pt-[40px] flex items-center justify-between w-full">
+    <header className="container flex flex-col items-center gap-[45px] lg:gap-[80px]">
+      <div className="pt-[40px] flex items-center justify-center md:justify-between w-full">
         <Image
           src={Circule}
           alt="Image"
           className=" hidden md:block left-[-3px] absolute h-[150px] w-[150px] lg:w-[200px] lg:h-[200px]"
         />
-        <div className="w-[200px] h-auto bg-transparent"></div>
+        <div className="w-[200px] hidden md:block h-auto bg-transparent"></div>
         <Link href="/">
           <Image
             src={Logo}
@@ -60,7 +60,7 @@ const HeaderComponent = () => {
           </Link>
         </div>
       </div>
-      <ul className="w-full flex items-center justify-center gap-[10px] sm:gap-[45px] lg:gap-[35px]">
+      <ul className="w-full flex items-center justify-center gap-[20px] sm:gap-[45px] lg:gap-[35px]">
         {headerLinks.map((item, index) => (
           <li
             key={index}

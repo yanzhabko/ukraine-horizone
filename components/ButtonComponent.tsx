@@ -33,7 +33,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
           type={type}
           onClick={onClick}
           href={href}
-          className={`${className} py-1 text-8 text-white font-bold bg-zinc-300 rounded-sm`}
+          className={`${className} active:opacity-90 cursor-pointer py-1 text-8 text-white font-bold bg-zinc-300 rounded-sm`}
         >
           {title}
         </Tag>
@@ -45,7 +45,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
           onClick={onClick}
           href={href}
           download
-          className={`${className} flex justify-center gap-[5px] items-center py-2 text-8 text-orange-400 font-bold bg-white rounded-[5px]`}
+          className={`${className} active:opacity-90 cursor-pointer flex justify-center gap-[5px] items-center py-2 text-8 text-orange-400 font-bold bg-white rounded-[5px]`}
         >
           {IconComponent && (
             <IconComponent
