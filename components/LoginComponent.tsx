@@ -85,13 +85,11 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ setState }) => {
               className="flex-1"
               onClick={() => setState("registration")}
               typeButton="default"
-              image=""
             />
             <ButtonComponent
               title="Увійти"
               className="flex-1"
               typeButton="default"
-              image=""
             />
           </div>
         </form>

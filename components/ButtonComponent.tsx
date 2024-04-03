@@ -6,7 +6,11 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   type?: "submit" | "button" | "reset";
-  image: React.ComponentType<{ src: string; alt?: string; className?: string }>;
+  image?: React.ComponentType<{
+    src: string;
+    alt?: string;
+    className?: string;
+  }>;
   typeButton: "default" | "download";
   tag?: "a" | "button";
   href?: string;
@@ -43,11 +47,13 @@ const ButtonComponent: React.FC<ButtonProps> = ({
           download
           className={`${className} flex justify-center gap-[5px] items-center py-2 text-8 text-orange-400 font-bold bg-white rounded-[5px]`}
         >
-          <IconComponent
-            src=""
-            alt=""
-            className="w-[18px] h-[18px] lg:w-[24px] lg:h-[24px]"
-          />
+          {IconComponent && (
+            <IconComponent
+              src=""
+              alt=""
+              className="w-[18px] h-[18px] lg:w-[24px] lg:h-[24px]"
+            />
+          )}
           {title}
         </Tag>
       );
