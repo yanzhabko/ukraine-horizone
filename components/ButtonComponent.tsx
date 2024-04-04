@@ -11,7 +11,7 @@ interface ButtonProps {
     alt?: string;
     className?: string;
   }>;
-  typeButton: "default" | "download";
+  typeButton: "default" | "download" | "news";
   tag?: "a" | "button";
   href?: string;
 }
@@ -57,6 +57,16 @@ const ButtonComponent: React.FC<ButtonProps> = ({
           {title}
         </Tag>
       );
+    } else if (typeButton === "news") {
+      <Tag
+        type={type}
+        onClick={onClick}
+        href={href}
+        download
+        className={`${className} text-orange-300 py-2 bg-red-500`}
+      >
+        {title}
+      </Tag>;
     } else {
       return null;
     }

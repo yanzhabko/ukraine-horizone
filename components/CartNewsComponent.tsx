@@ -26,16 +26,19 @@ const CartNewsComponent: React.FC<CartNewsProps> = ({
     <div
       className="w-full h-auto bg-white shadow-xl rounded-[15px] border-gray-3d00 border-[0.1px]"
       onClick={() => {
-        mobile ? handleClickFlip() : null;
+        mobile && handleClickFlip();
       }}
     >
-      <div className="flex justify-between items-center bg-white ps-[15px] h-[40px] rounded-t-[15px]">
+      <div className="flex justify-between items-center bg-zinc-50 ps-[15px] h-[40px] rounded-t-[15px]">
         <p className="text-center text-[16px] md:text-[18px] lg:text-[22px] font-medium text-orange-300">
           {title}
         </p>
         <button
-          className="hidden md:block h-full w-[150px] bg-zinc-50 text-orange-300 font-semibold hover:text-white hover:bg-orange-300 rounded-tr-[15px]"
-          onClick={handleClickFlip}
+          className="hidden md:block h-full w-[150px] bg-zinc-100 text-orange-300 font-semibold hover:text-white hover:bg-orange-300 rounded-tr-[15px] z-20"
+          onClick={() => {
+            handleClickFlip();
+            console.log(isFlipped);
+          }}
         >
           {isFlipped ? "Назад" : "Детальніше"}
         </button>
