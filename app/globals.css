@@ -43,14 +43,14 @@ body {
   position: absolute;
   height: 50vh;
   width: 100%;
-  top: 18%;
+  top: 40%;
   z-index: -4;
 }
 
 .body-image::after {
   content: "";
-  filter: blur(1.5rem);
-  background-color: #e4e4e7;
+  filter: blur(29px);
+  background-color: #ededf0;
   position: absolute;
   height: 150px;
   width: 100%;

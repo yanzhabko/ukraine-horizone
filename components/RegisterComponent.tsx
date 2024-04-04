@@ -28,16 +28,16 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({ setState }) => {
         <h1 className="bg-orange-300 px-5 py-3 rounded-[2rem] absolute top-[-25px] text-white font-bold">
           Регістрація
         </h1>
-        <form className="flex flex-col gap-2 text-end">
+        <form className="flex flex-col gap-[10px] text-end">
           <Input
             leftSection={
-              <Image src={User} alt="" className="w-[14px] h-[14px]" />
+              <Image src={User} alt="" className="w-[20px] h-[20px]" />
             }
             placeholder="Введіть нікнейм"
             classNames={{
               wrapper: `${
                 focus === "userName" && "!border-orange-400"
-              } py-1 border border-orange-300 flex items-center gap-[5px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-2`,
+              } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-2`,
               section: "",
               input:
                 "bg-orange-300 text-white outline-none placeholder:text-white",
@@ -46,13 +46,13 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({ setState }) => {
           />
           <Input
             leftSection={
-              <Image src={Email} alt="" className="w-[14px] h-[14px]" />
+              <Image src={Email} alt="" className="w-[20px] h-[20px]" />
             }
             placeholder="Введіть емаіл"
             classNames={{
               wrapper: `${
                 focus === "email" && "!border-orange-400"
-              } py-1 border border-orange-300 flex items-center gap-[5px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-2`,
+              } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-2`,
               section: "",
               input:
                 "bg-orange-300 text-white outline-none placeholder:text-white",
@@ -61,13 +61,13 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({ setState }) => {
           />
           <Input
             leftSection={
-              <Image src={Lock} alt="" className="w-[14px] h-[14px]" />
+              <Image src={Lock} alt="" className="w-[20px] h-[20px]" />
             }
             placeholder="Введіть пароль"
             classNames={{
               wrapper: `${
                 focus === "password" && "!border-orange-400"
-              } py-1 border border-orange-300 flex items-center gap-[5px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-2`,
+              } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-2`,
               section: "",
               input:
                 "bg-orange-300 text-white outline-none placeholder:text-white",
@@ -76,20 +76,20 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({ setState }) => {
           />
           <Input
             leftSection={
-              <Image src={Lock} alt="" className="w-[14px] h-[14px]" />
+              <Image src={Lock} alt="" className="w-[20px] h-[20px]" />
             }
             placeholder="Повторіть пароль"
             classNames={{
               wrapper: `${
                 focus === "confirmedPassword" && "!border-orange-400"
-              } py-1 border border-orange-300 flex items-center gap-[5px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-2`,
+              } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-2`,
               section: "",
               input:
                 "bg-orange-300 text-white outline-none placeholder:text-white",
             }}
             onFocus={() => setFocus("confirmedPassword")}
           />
-          <div className="flex gap-[5px] items-center justify-end">
+          <div className="ps-[5px] flex gap-[5px] items-center justify-end">
             <input
               type="checkbox"
               checked={isChecked}
@@ -97,7 +97,7 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({ setState }) => {
               className="checked:text-orange-300"
             />
             <div className="flex flex-col">
-              <p className="text-[8px] w-[150px] lg:w-[200px] xl:w-full">
+              <p className="text-[11px] w-full">
                 Я прочитав і згоден з{" "}
                 <Link href="/rules" className="text-blue-300">
                   правилами
@@ -109,7 +109,7 @@ const RegisterComponent: React.FC<RegisterComponentProps> = ({ setState }) => {
               </p>
             </div>
           </div>
-          <div className="flex gap-[5px]">
+          <div className="flex justify-between gap-[15px]">
             <ButtonComponent
               title="Назад"
               type="button"

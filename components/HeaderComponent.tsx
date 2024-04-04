@@ -16,32 +16,40 @@ const HeaderComponent = () => {
   const mobile = useMediaQuery("(max-width:1024px)");
 
   return (
-    <header className="container flex flex-col items-center gap-[45px] lg:gap-[80px]">
+    <header className="container flex flex-col items-center gap-[50px]">
       <div className="pt-[40px] flex items-center justify-center md:justify-between w-full">
         <Image
           src={Circule}
           alt="Image"
-          className=" hidden md:block left-[-3px] absolute h-[150px] w-[150px] lg:w-[200px] lg:h-[200px]"
+          className="hidden md:block left-[-3px] absolute lg:h-[200px] xl:h-[300px] w-auto z-0"
         />
-        <div className="w-[200px] hidden md:block h-auto bg-transparent"></div>
+        <div className=" hidden md:block h-auto bg-transparent w-auto z-10">
+          <p className="text-[18px] lg:text-[24px] xl:text-[28px] text-white font-light">
+            Приєднуйся до гри
+          </p>
+          <p className="text-[18px] lg:text-[24px] xl:text-[28px] font-bold text-white uppercase">
+            прямо зараз!
+          </p>
+        </div>
         <Link href="/">
           <Image
             src={Logo}
             alt="Logo"
-            className="h-[180px] lg:h-[250px] w-auto"
+            className="h-[180px] lg:h-[250px] xl:h-[350px] w-auto drop-shadow-2xl"
           />
         </Link>
         <div className="hidden md:flex flex-col gap-[3px]">
-          <p className="text-white font-bold text-[20px] animate-bounce">
-            Завантажити лаунчер!
+          <p className="text-white font-bold text-[16px] xl:text-[20px] uppercase">
+            Завантажуй лаунчер!
           </p>
-          <div className="flex flex-col gap-[8px]">
+          <div className="flex flex-col gap-[15px]">
             <ButtonComponent
               typeButton="download"
               image={FaWindows}
               title="Windows"
               href="@/images/launcher/Ukraine_Horizon.exe"
               tag="a"
+              className=""
             />
             <ButtonComponent
               typeButton="download"
@@ -77,7 +85,7 @@ const HeaderComponent = () => {
             <Link
               key={index}
               href={item.href}
-              className="text-white font-bold text-[14px] lg:text-[20px] xl:text-[28px]"
+              className="text-white font-bold text-[14px] sm:text-[16px] lg:text-[22px] xl:text-[28px]"
             >
               {item.title}
             </Link>
