@@ -4,8 +4,6 @@ import "./globals.css";
 import FooterComponent from "@/components/FooterComponent";
 import HeaderComponent from "@/components/HeaderComponent";
 import LeftNavigation from "@/components/RightNavigation";
-import { useMediaQuery } from "@mantine/hooks";
-import { ImageProvider } from "@/hook/ImageProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,15 +27,15 @@ export default function RootLayout({
         <meta property="og:image" content="noimageindex" />
         <link rel="shortcut icon" href="favoicon.ico" />
       </head>
-      <body className={inter.className}>
-        <ImageProvider>
-          <HeaderComponent />
-          <main className="lg:flex container gap-[70px]">
-            <section className="w-full lg:flex-1">{children}</section>
-            <LeftNavigation />
-          </main>
-          <FooterComponent />
-        </ImageProvider>
+      <body className={`${inter.className} gap-[70px] lg:gap-[100px]`}>
+        <div className="body-image"></div>
+        <div className="left-image"></div>
+        <HeaderComponent />
+        <main className="lg:flex container gap-[70px]">
+          <section className="w-full lg:flex-1">{children}</section>
+          <LeftNavigation />
+        </main>
+        <FooterComponent />
       </body>
     </html>
   );

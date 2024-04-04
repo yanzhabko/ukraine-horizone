@@ -18,19 +18,22 @@ const HeaderComponent = () => {
   return (
     <header className="container flex flex-col items-center gap-[50px]">
       <div className="pt-[40px] flex items-center justify-center md:justify-between w-full">
-        <Image
-          src={Circule}
-          alt="Image"
-          className="hidden md:block left-[-3px] absolute lg:h-[200px] xl:h-[300px] w-auto z-0"
-        />
-        <div className=" hidden md:block h-auto bg-transparent w-auto z-10">
-          <p className="text-[18px] lg:text-[24px] xl:text-[28px] text-white font-light">
-            Приєднуйся до гри
-          </p>
-          <p className="text-[18px] lg:text-[24px] xl:text-[28px] font-bold text-white uppercase">
-            прямо зараз!
-          </p>
+        <div className="hidden md:block left-[-3px] absolute">
+          <Image
+            src={Circule}
+            alt="Image"
+            className="h-[150px] lg:h-[200px] xl:h-[300px] w-auto z-0"
+          />
+          <div className="absolute w-auto left-[60%] lg:left-[80%] top-[30%] h-auto bg-transparent z-10">
+            <p className="w-[170px] lg:w-[260px] text-[18px] lg:text-[24px] xl:text-[28px] text-white font-light">
+              Приєднуйся до гри
+            </p>
+            <p className="text-[18px] lg:text-[24px] xl:text-[28px] font-bold text-white uppercase">
+              прямо зараз!
+            </p>
+          </div>
         </div>
+        <div className="hidden md:block w-[200px] h-full"></div>
         <Link href="/">
           <Image
             src={Logo}
