@@ -15,6 +15,7 @@
     "@mantine/hooks": "^7.6.2",
     "@remixicon/react": "^4.2.0",
     "@tremor/react": "^3.14.1",
+    "axios": "^1.6.8",
     "framer-motion": "^11.0.24",
     "motion": "^10.17.0",
     "next": "14.1.4",

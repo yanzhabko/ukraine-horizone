@@ -54,7 +54,7 @@ const RulesComponent: React.FC<RuleProps> = ({ rules }) => {
             </div>
             {openRuleIndex === index ? (
               <div
-                className="flex flex-col gap-[15px] ps-3 mt-2 scroll-mt-[50px]"
+                className="flex flex-col gap-[15px] ps-3 mt-2 scroll-mt-[150px]"
                 ref={openRuleRef}
               >
                 {rule.descriptions.map((description, key: number) => (
