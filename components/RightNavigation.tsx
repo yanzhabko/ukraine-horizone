@@ -14,8 +14,8 @@ const RightNavigation = () => {
   };
 
   return (
-    <aside className="hidden lg:block lg:flex-2 w-[275px]">
-      <nav className="flex flex-col gap-[55px]">
+    <aside className="hidden lg:block lg:flex-2 lg:w-[320px] xl:w-[350px] mt-[25px]">
+      <nav className="flex flex-col gap-[70px]">
         {changeForm === "login" ? (
           <LoginComponent setState={handleClickChangeForm} />
         ) : (

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, ProgressCircle } from "@tremor/react";
-import { serversMinecraft } from "@/data/index";
+import { ProgressCircle } from "@tremor/react";
 import axios from "axios";
 
 const MonitoringComponent = () => {
@@ -36,8 +35,10 @@ const MonitoringComponent = () => {
           <ProgressCircle
             value={(onlineUsers / maxOnlineUsers) * 100}
             color="orange-300"
+            className="*:h-[80px] *:w-[80px]"
+            size="md"
           >
-            <div className="flex flex-col items-center gap-0">
+            <div className="flex flex-col justify-center items-center mx-auto">
               <span className="text-[1rem] font-semibold">{onlineUsers}</span>
               <span className="text-[0.7rem] text-neutral-600">
                 {maxOnlineUsers}
@@ -45,8 +46,8 @@ const MonitoringComponent = () => {
             </div>
           </ProgressCircle>
           <div className="flex flex-col text-center w-[130px]">
-            <p className="font-semibold text-[1.2rem]">ANIGMA</p>
-            <p className="text-[0.65rem]">Technomagic</p>
+            <p className="font-semibold text-[20px] lg:text-[26px]">ANIGMA</p>
+            <p className="text-[14px]">Technomagic</p>
           </div>
         </div>
       </div>

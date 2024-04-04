@@ -1,62 +1,3 @@
-// "use client";
-// import React, { useState } from "react";
-// import { useMediaQuery } from "@mantine/hooks";
-// import Image from "next/image";
-// import { motion } from "framer-motion";
-
-// interface CartNewsProps {
-//   title: string;
-//   description: string;
-//   image: string;
-// }
-
-// const CartNewsComponent: React.FC<CartNewsProps> = ({
-//   title,
-//   description,
-//   image,
-// }) => {
-//   const [isFlipped, setFlipped] = useState(false);
-//   const mobile = useMediaQuery("(max-width:640px)");
-
-//   const handleClickFlip = () => {
-//     setFlipped(!isFlipped);
-//   };
-
-//   return (
-//     <div
-//       className="w-full h-auto bg-white shadow-lg"
-//       onClick={() => {
-//         mobile ? handleClickFlip() : null;
-//       }}
-//     >
-//       <div className="flex justify-between items-center bg-white h-[40px] ps-[15px]">
-//         <p className="text-[24px] font-medium text-orange-300">{title}</p>
-//         <button
-//           className="h-full w-[150px] bg-zinc-50 text-orange-300 font-semibold hover:text-white hover:bg-orange-300"
-//           onClick={handleClickFlip}
-//         >
-//           {isFlipped ? "Назад" : "Детальніше"}
-//         </button>
-//       </div>
-//       {!isFlipped ? (
-//         <Image
-//           src={image}
-//           alt="News Image"
-//           width={100}
-//           height={100}
-//           className="bg-no-repeat bg-cover w-full h-[420px]"
-//         />
-//       ) : (
-//         <div className="h-[420px] bg-white border-t-zinc-100 border-t-[2px] ps-[15px] pe-[30px]">
-//           <p className="">{description}</p>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default CartNewsComponent;
-
 "use client";
 import React, { useState } from "react";
 import { useMediaQuery } from "@mantine/hooks";
@@ -83,17 +24,17 @@ const CartNewsComponent: React.FC<CartNewsProps> = ({
 
   return (
     <div
-      className="w-full h-auto bg-white shadow-2xl"
+      className="w-full h-auto bg-white shadow-xl rounded-[15px] border-gray-3d00 border-[0.1px]"
       onClick={() => {
         mobile ? handleClickFlip() : null;
       }}
     >
-      <div className="flex justify-between items-center bg-white h-[40px] ps-[15px]">
+      <div className="flex justify-between items-center bg-white ps-[15px] h-[40px] rounded-t-[15px]">
         <p className="text-center text-[16px] md:text-[18px] lg:text-[22px] font-medium text-orange-300">
           {title}
         </p>
         <button
-          className="hidden md:block h-full w-[150px] bg-zinc-50 text-orange-300 font-semibold hover:text-white hover:bg-orange-300"
+          className="hidden md:block h-full w-[150px] bg-zinc-50 text-orange-300 font-semibold hover:text-white hover:bg-orange-300 rounded-tr-[15px]"
           onClick={handleClickFlip}
         >
           {isFlipped ? "Назад" : "Детальніше"}
@@ -112,6 +53,7 @@ const CartNewsComponent: React.FC<CartNewsProps> = ({
               alt="News Image"
               layout="fill"
               objectFit="cover"
+              className="rounded-b-[15px]"
             />
           </div>
         </motion.div>

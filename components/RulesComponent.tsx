@@ -34,7 +34,7 @@ const RulesComponent: React.FC<RuleProps> = ({ rules }) => {
   }, [openRuleIndex]);
 
   return (
-    <div className="px-[40px] bg-white rounded-2xl py-[40px] relative shadow-lg">
+    <div className="px-[40px] bg-white rounded-2xl py-[40px] relative shadow-lg mt-[25px]">
       <div className="absolute bg-orange-300 w-[70%] left-[15%] top-[-25px] flex items-center text-center px-[20px] py-[10px] rounded-[20px]">
         <Image src={Scales} alt="Image" className="w-[28px] h-[28px]" />
         <h1 className="flex-1 text-white font-bold">Правила серверу</h1>

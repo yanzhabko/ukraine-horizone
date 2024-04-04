@@ -38,20 +38,20 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ setState }) => {
           Авторизація
         </h1>
         <form
-          className="flex flex-col gap-2 text-end"
+          className="flex flex-col gap-[10px] text-end"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="flex  flex-col gap-4">
             <Input
               {...register("login")}
               leftSection={
-                <Image src={User} alt="" className="w-[14px] h-[14px]" />
+                <Image src={User} alt="" className="w-[20px] h-[20px]" />
               }
               placeholder="Введіть логін"
               classNames={{
                 wrapper: `${
                   focus === "login" && "!border-orange-400"
-                } py-1 border border-orange-300 flex items-center gap-[5px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-2`,
+                } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-3`,
                 section: "",
                 input:
                   "bg-orange-300 text-white outline-none placeholder:text-white",
@@ -61,13 +61,13 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ setState }) => {
             <Input
               {...register("password")}
               leftSection={
-                <Image src={Lock} alt="" className="w-[16px] h-[16px]" />
+                <Image src={Lock} alt="" className="w-[20px] h-[20px]" />
               }
               placeholder="Введіть пароль"
               classNames={{
                 wrapper: `${
                   focus === "password" && "!border-orange-400"
-                } py-1 border border-orange-300 flex items-center gap-[5px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-2`,
+                } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-3`,
                 section: "",
                 input:
                   " bg-orange-300 text-white outline-none placeholder:text-white",
@@ -75,10 +75,13 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ setState }) => {
               onFocus={() => setFocus("password")}
             />
           </div>
-          <Link href="/" className="w-auto text-[0.65rem] underline opacity-75">
+          <Link
+            href="/"
+            className="w-auto sm:text-[12px] lg:text-[14px] underline opacity-75"
+          >
             Забули пароль
           </Link>
-          <div className="flex gap-[5px]">
+          <div className="flex justify-between gap-[15px]">
             <ButtonComponent
               title="Регістрація"
               type="button"

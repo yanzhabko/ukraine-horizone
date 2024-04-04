@@ -33,7 +33,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <ImageProvider>
           <HeaderComponent />
-          <BackgroundComponent />
           <main className="lg:flex container gap-[70px]">
             <section className="w-full lg:flex-1">{children}</section>
             <LeftNavigation />
