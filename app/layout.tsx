@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import FooterComponent from "@/components/FooterComponent";
 import HeaderComponent from "@/components/HeaderComponent";
-import BackgroundComponent from "@/components/BackgroundComponent";
 import LeftNavigation from "@/components/RightNavigation";
 import { useMediaQuery } from "@mantine/hooks";
 import { ImageProvider } from "@/hook/ImageProvider";
