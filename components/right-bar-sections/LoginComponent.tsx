@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import ButtonComponent from "./ButtonComponent";
+import ButtonComponent from "@/components/ButtonComponent";
 import User from "@/images/icons/user.svg";
 import Lock from "@/images/icons/lock.svg";
 import Image from "next/image";

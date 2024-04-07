@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { Input, MantineProvider, Checkbox, Anchor } from "@mantine/core";
-import ButtonComponent from "./ButtonComponent";
+import { Input, MantineProvider } from "@mantine/core";
+import ButtonComponent from "@/components/ButtonComponent";
 import User from "@/images/icons/user.svg";
 import Email from "@/images/icons/mail.svg";
 import Lock from "@/images/icons/lock.svg";

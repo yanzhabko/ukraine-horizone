@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import FooterComponent from "@/components/FooterComponent";
 import HeaderComponent from "@/components/HeaderComponent";
-import LeftNavigation from "@/components/RightNavigation";
+import RightNavigationSection from "./section/RightNavigationSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +33,7 @@ export default function RootLayout({
         <HeaderComponent />
         <main className="lg:flex container gap-[70px]">
           <section className="w-full lg:flex-1">{children}</section>
-          <LeftNavigation />
+          <RightNavigationSection />
         </main>
         <FooterComponent />
       </body>

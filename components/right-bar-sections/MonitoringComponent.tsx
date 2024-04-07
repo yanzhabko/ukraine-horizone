@@ -46,8 +46,10 @@ const MonitoringComponent = () => {
             </div>
           </ProgressCircle>
           <div className="flex flex-col text-center w-[130px]">
-            <p className="font-semibold text-[20px] lg:text-[26px]">ANIGMA</p>
-            <p className="text-[14px]">Technomagic</p>
+            <p className="font-semibold text-[20px] lg:text-[26px] uppercase">
+              ANIGMA
+            </p>
+            <p className="text-[14px]">TechnoMagic</p>
           </div>
         </div>
       </div>
