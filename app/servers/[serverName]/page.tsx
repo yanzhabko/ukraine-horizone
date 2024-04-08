@@ -1,14 +1,11 @@
-import React from "react";
-
-type ServersProps = {
-  params: {
-    serverName: string;
+export async function generateStaticPaths() {
+  return {
+    paths: [{ params: { serverName: "anigma" } }],
+    fallback: false,
   };
-};
+}
 
-const Servers: React.FC<ServersProps> = ({ params }) => {
+export default function Servers({ params }: { params: any }) {
   console.log(params);
   return <div>{params.serverName}</div>;
-};
-
-export default Servers;
+}
