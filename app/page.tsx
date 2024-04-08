@@ -1,9 +1,9 @@
-import NewsComponent from "@/components/NewsComponent";
+import NewsSection from "./section/NewsSection";
 
 export default function Home() {
   return (
     <>
-      <NewsComponent />
+      <NewsSection />
     </>
   );
 }

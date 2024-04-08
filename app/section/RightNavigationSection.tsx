@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import LoginComponent from "./LoginComponent";
-import RegisterComponent from "./RegisterComponent";
-import MonitoringComponent from "./MonitoringComponent";
+import LoginComponent from "@/components/right-bar-sections/LoginComponent";
+import RegisterComponent from "@/components/right-bar-sections/RegisterComponent";
+import MonitoringComponent from "@/components/right-bar-sections/MonitoringComponent";
 
 const RightNavigation = () => {
   const [changeForm, setChangeForm] = useState<"login" | "registration">(

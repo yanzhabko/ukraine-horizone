@@ -84,3 +84,7 @@ body {
 main {
   flex: 1;
 }
+
+h1 {
+  @apply text-[16px] lg:text-[18px];
+}

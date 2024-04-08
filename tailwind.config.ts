@@ -11,6 +11,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      borderWidth: {
+        small: "0.0625rem",
+      },
       keyframes: {
         "slide-up": {
           from: {
@@ -30,8 +33,17 @@ const config: Config = {
             width: "80%",
           },
         },
+        "bounce-x": {
+          "0%": {
+            transform: "translateX(4px)",
+          },
+          "100%": {
+            transform: "translateX(-4px)",
+          },
+        },
       },
       animation: {
+        "bounce-x": "bounce-x 1s infinite alternate",
         "slide-up": "slide-up 0.7s ease-out forwards",
         "line-slide-up": "line-slide-up 0.5s ease-out forwards",
       },

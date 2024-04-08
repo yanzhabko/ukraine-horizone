@@ -1,9 +1,10 @@
 import React from "react";
+import ServerMonitoringSection from "../section/ServerMonitoringSection";
 
 const page = () => {
   return (
     <>
-      <div>page</div>
+      <ServerMonitoringSection />
     </>
   );
 };

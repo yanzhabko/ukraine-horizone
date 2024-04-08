@@ -1,17 +1,16 @@
 import React from "react";
-import Image from "next/image";
 
 interface ButtonProps {
   title: string;
   className?: string;
-  onClick?: () => void;
+  onClick?: (name?: any) => void;
   type?: "submit" | "button" | "reset";
   image?: React.ComponentType<{
     src: string;
     alt?: string;
     className?: string;
   }>;
-  typeButton: "default" | "download" | "news";
+  typeButton: "default" | "download" | "news" | "servers";
   tag?: "a" | "button";
   href?: string;
 }
@@ -45,13 +44,13 @@ const ButtonComponent: React.FC<ButtonProps> = ({
           onClick={onClick}
           href={href}
           download
-          className={`${className} active:opacity-90 cursor-pointer flex justify-center gap-[5px] items-center py-3 text-8 text-orange-400 font-bold bg-white rounded-[15px]`}
+          className={`${className} active:opacity-90 cursor-pointer flex justify-center gap-[15px] items-center py-3 text-8 text-orange-400 font-bold bg-white rounded-[15px]`}
         >
           {IconComponent && (
             <IconComponent
               src=""
               alt=""
-              className="w-[18px] h-[18px] lg:w-[24px] lg:h-[24px]"
+              className="w-[20px] h-[20px] lg:w-[32px] lg:h-[32px]"
             />
           )}
           {title}
@@ -67,6 +66,24 @@ const ButtonComponent: React.FC<ButtonProps> = ({
       >
         {title}
       </Tag>;
+    } else if (typeButton === "servers") {
+      return (
+        <Tag
+          type={type}
+          onClick={onClick}
+          href={href}
+          className={`${className} active:opacity-80 cursor-pointer flex justify-center gap-[10px] items-center px-3 py-3 text-[12px] xl:text-[16px] text-white font-bold bg-orange-300 rounded-[15px]`}
+        >
+          {title}
+          {IconComponent && (
+            <IconComponent
+              src=""
+              alt=""
+              className="w-[14px] h-[14px] xl:w-[18px] lg:h-[18px] animate-bounce-x"
+            />
+          )}
+        </Tag>
+      );
     } else {
       return null;
     }
