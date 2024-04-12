@@ -1,5 +1,5 @@
-import RegisterSection from "../section/RegisterSection";
 import React from "react";
+import RegisterSection from "../section/RegisterSection";
 
 const page = () => {
   return (
