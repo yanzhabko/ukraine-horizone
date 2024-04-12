@@ -1,9 +1,10 @@
 import React from "react";
 import { serversDescription } from "@/data";
 import { notFound } from "next/navigation";
+import ServerInformationSection from "@/app/section/ServerInformationSection";
 
 export async function generateStaticParams() {
-  const servers = [{ name: "ANIGMA" }, { name: "GGG" }, { name: "GG2G" }];
+  const servers = [{ name: "anigma" }];
   return servers.map((server) => ({
     name: server.name.toString(),
   }));
@@ -21,6 +22,19 @@ export default function Servers({ params }: { params: any }) {
     return notFound();
   }
 
-  console.log(server);
-  return <div>{params.name}</div>;
+  return (
+    <>
+      {server.map((item, index) => (
+        <ServerInformationSection
+          key={index}
+          name={item.nameServer.toUpperCase()}
+          category={item.category}
+          information={item.information}
+          description={item.desctiption}
+          image={item.image}
+          mods={item.mods}
+        />
+      ))}
+    </>
+  );
 }

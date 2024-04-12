@@ -3,17 +3,14 @@ import React from "react";
 import Link from "next/link";
 import { headerLinks } from "@/data";
 import Logo from "@/images/Logo.svg";
-import Download from "@/images/icons/download.svg";
 import Circule from "@/images/circle.png";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useMediaQuery } from "@mantine/hooks";
 import ButtonComponent from "./ButtonComponent";
 import { FaWindows, FaLinux, FaDiscord, FaTelegramPlane } from "react-icons/fa";
 
 const HeaderComponent = () => {
   const pathname = usePathname();
-  const mobile = useMediaQuery("(max-width:1024px)");
 
   return (
     <header className="container flex flex-col items-center gap-[50px]">
@@ -22,7 +19,7 @@ const HeaderComponent = () => {
           <Image
             src={Circule}
             alt="Image"
-            className="h-[150px] lg:h-[200px] xl:h-[300px] w-auto z-0"
+            className="h-[150px] lg:h-[200px] xl:h-[250px] w-auto z-0"
           />
           <div className="absolute w-auto left-[60%] lg:left-[80%] top-[30%] h-auto bg-transparent z-10">
             <p className="w-[170px] lg:w-[260px] text-[18px] lg:text-[24px] xl:text-[28px] text-white font-light">

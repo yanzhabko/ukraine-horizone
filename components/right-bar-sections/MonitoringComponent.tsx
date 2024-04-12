@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { ProgressCircle } from "@tremor/react";
+// import { ProgressCircle } from "@tremor/react";
 import axios from "axios";
+import MonitoringCartComponent from "./MonitoringCartComponent";
+import { serversMinecraft } from "@/data";
+// import Link from "next/link";
 
 const MonitoringComponent = () => {
   const [onlineUsers, setOnlineUsers] = useState(0);
@@ -30,29 +33,15 @@ const MonitoringComponent = () => {
       <h1 className="bg-orange-300 px-5 py-3 rounded-[2rem] absolute top-[-25px] text-white font-bold">
         Моніторинг
       </h1>
-      <div className="flex flex-col items-start gap-4">
-        <div className="flex justify-center items-center gap-[20px]">
-          <ProgressCircle
-            value={(onlineUsers / maxOnlineUsers) * 100}
-            color="orange-300"
-            className="*:h-[80px] *:w-[80px]"
-            size="md"
-          >
-            <div className="flex flex-col justify-center items-center mx-auto">
-              <span className="text-[1rem] font-semibold">{onlineUsers}</span>
-              <span className="text-[0.7rem] text-neutral-600">
-                {maxOnlineUsers}
-              </span>
-            </div>
-          </ProgressCircle>
-          <div className="flex flex-col text-center w-[130px]">
-            <p className="font-semibold text-[20px] lg:text-[26px] uppercase">
-              ANIGMA
-            </p>
-            <p className="text-[14px]">TechnoMagic</p>
-          </div>
-        </div>
-      </div>
+      {serversMinecraft.map((server, index) => (
+        <MonitoringCartComponent
+          key={index}
+          serverName={server.nameServer}
+          category={server.category}
+          maxOnlineUsers={maxOnlineUsers}
+          onlineUsers={onlineUsers}
+        />
+      ))}
     </div>
   );
 };

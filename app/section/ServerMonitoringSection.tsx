@@ -10,7 +10,7 @@ const ServerMonitoringSection = () => {
   const [maxOnlineUsers, setMaxOnlineUsers] = useState(0);
   const router = useRouter();
 
-  const handleServerClick = (name: any) => {
+  const handleServerClick = (name: string) => {
     router.push(`/servers/${name}`);
   };
 
