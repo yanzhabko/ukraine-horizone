@@ -82,7 +82,7 @@ const LoginComponent: React.FC = () => {
               title="Регістрація"
               className="flex-1 text-center"
               typeButton="default"
-              href="/registration"
+              href="/register"
               tag="a"
             />
             <ButtonComponent
