@@ -4,6 +4,11 @@ import Dice from "@/images/icons/dice.svg";
 import Cart from "@/images/icons/cart.svg";
 import ANIGMA from "../images/servers/anigma.png";
 
+import Grass from "@/images/servers/icons/grass.png";
+import OtherWorld from "@/images/servers/icons/nether.webp";
+import Sword from "@/images/servers/icons/sword.webp";
+import World from "@/images/servers/icons/world.webp";
+
 export const headerLinks = [
   { href: "/", title: "Головна", icon: Castle },
   { href: "/rules", title: "Правила", icon: Scales },
@@ -23,9 +28,76 @@ export const serversDescription = [
   {
     nameServer: "anigma",
     category: "TechnoMagic",
+    information: [
+      { information: "1.12.1", name: "Версія гри", icon: Grass },
+      {
+        information: "10000x10000",
+        name: "Розмір світу",
+        icon: World,
+      },
+      {
+        information: "5000x5000",
+        name: "Розмір дод. світів",
+        icon: OtherWorld,
+      },
+      { information: "Увімкнено", name: "PVP-режим", icon: Sword },
+    ],
     desctiption:
       "Ти опинився у світі магії та технологій, де зможеш знайти безліч цікавих модифікацій як магічного напряму, так і індустріального, навіть, поєднати одне з одним, створюючи різноманітні рішення і автоматизуючи свій розвиток! За велику кількість часу тобі ніколи не стане нудно грати, оскільки тут є унікальні рецепти і нові дослідження в ThaumCraft. Щоб урізноманітнити твоє виживання - у нас проводяться конкурси та автоматичні івенти, які зроблять твою гру на сервері цікавішою. Все залежить тільки від тебе і того, чого ти хочеш досягти!",
-    image: [],
+    image: ANIGMA,
+    mods: [
+      "AE2S tuff",
+      "AEAddtion",
+      "AE2",
+      "Avaritia",
+      "Avaritia Addons",
+      "Avaritiaio",
+      "Baubles",
+      "Binnie-mods",
+      "Biomes OPlenty",
+      "Blood Arsenal",
+      "Blood Magic",
+      "bonsaitrees",
+      "Botania",
+      "Botanianeddsit",
+      "Botania Tweaks",
+      "Botanic Addition",
+      "BuildCraft-all",
+      "Chisel",
+      "Dense Neutron Collectors",
+      "Draconic Evolution",
+      "EnderIO",
+      "EndreZoo",
+      "EnchantingPlus",
+      "ExtraBotany",
+      "ExtraCPUs",
+      "ExtraUtils2",
+      "Forestry",
+      "Gendustry",
+      "IndustrialUpgrade",
+      "IronChest",
+      "LazyAE2",
+      "MoarTinkers",
+      "MowziesMobs",
+      "PowerUtilities",
+      "QuantumGenerators",
+      "RedstoneFlux",
+      "Schematica",
+      "SimplyQuarriers",
+      "SolarFluxReborn",
+      "TConstruct",
+      "Thaumcraft",
+      "ThaumicAdditions",
+      "ThaumicBases",
+      "Thaumic Energistics",
+      "Thaumic Inventory Scanning",
+      "Thaumic Perirhery",
+      "ThaumTinker",
+      "ThermalDynamic",
+      "ThermalExpansion",
+      "ThermalFoundation",
+      "TinkerToolLeveling",
+    ],
   },
 ];
 
@@ -179,7 +251,7 @@ export const rules = [
         warning: "Покарання: Блокування облікового запису на 3 доби",
       },
       {
-        title: "Заборонено образа родичів, батьків.",
+        title: "Заборонено копати ями близько до чужого привату.",
         warning:
           "Покарання: Попередження з проханням самостійно прибрати ями, якщо це не допомогло, блокування облікового запису на 1 добу (якщо порушника немає в мережі, блокування надається без попередження і ями прибираються адміністрацією)",
       },
