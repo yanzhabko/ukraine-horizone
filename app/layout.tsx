@@ -25,7 +25,7 @@ export default function RootLayout({
           content="ukraine horizon, сервера майкрафт, ураїне хорізон, топ-10 серверів майкрафт"
         />
         <meta property="og:image" content="noimageindex" />
-        <link rel="shortcut icon" href="favoicon.ico" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${inter.className} gap-[70px] lg:gap-[100px]`}>
         <div className="body-image"></div>

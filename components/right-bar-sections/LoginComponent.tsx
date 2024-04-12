@@ -13,11 +13,7 @@ interface LoginProps {
   password: string;
 }
 
-interface LoginComponentProps {
-  setState: (type: "login" | "registration") => void;
-}
-
-const LoginComponent: React.FC<LoginComponentProps> = ({ setState }) => {
+const LoginComponent: React.FC = () => {
   const { register, handleSubmit } = useForm<LoginProps>();
   const [focus, setFocus] = useState<null | "login" | "password">(null);
   const [password, setPassword] = useState("");
@@ -51,7 +47,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ setState }) => {
               classNames={{
                 wrapper: `${
                   focus === "login" && "!border-orange-400"
-                } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-3`,
+                } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[10px] rounded-e-[10px] px-3`,
                 section: "",
                 input:
                   "bg-orange-300 text-white outline-none placeholder:text-white",
@@ -67,7 +63,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ setState }) => {
               classNames={{
                 wrapper: `${
                   focus === "password" && "!border-orange-400"
-                } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[15px] rounded-e-[15px] px-3`,
+                } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[10px] rounded-e-[10px] px-3`,
                 section: "",
                 input:
                   " bg-orange-300 text-white outline-none placeholder:text-white",
@@ -84,10 +80,10 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ setState }) => {
           <div className="flex justify-between gap-[15px]">
             <ButtonComponent
               title="Регістрація"
-              type="button"
-              className="flex-1"
-              onClick={() => setState("registration")}
+              className="flex-1 text-center"
               typeButton="default"
+              href="/registration"
+              tag="a"
             />
             <ButtonComponent
               title="Увійти"

@@ -1,29 +1,23 @@
+"use client";
 import React, { useState, useEffect } from "react";
-// import { ProgressCircle } from "@tremor/react";
 import axios from "axios";
 import MonitoringCartComponent from "./MonitoringCartComponent";
 import { serversMinecraft } from "@/data";
-// import Link from "next/link";
+import { fetchServerStatus } from "@/service/fetchServerStatus";
 
 const MonitoringComponent = () => {
   const [onlineUsers, setOnlineUsers] = useState(0);
   const [maxOnlineUsers, setMaxOnlineUsers] = useState(0);
 
   useEffect(() => {
-    const fetchServerStatus = async () => {
-      try {
-        const response = await axios.get(
-          "https://api.mcstatus.io/v2/status/java/195.35.56.205:25567"
-        );
-        setOnlineUsers(response.data.players.online);
-        setMaxOnlineUsers(response.data.players.max);
-      } catch (error) {
-        console.error("Сталася помилка при отриманні даних:", error);
-      }
+    const fetchData = async () => {
+      const { onlineUsers, maxOnlineUsers } = await fetchServerStatus();
+      setOnlineUsers(onlineUsers);
+      setMaxOnlineUsers(maxOnlineUsers);
     };
-    fetchServerStatus();
+    fetchData();
 
-    const intervalId = setInterval(fetchServerStatus, 60000);
+    const intervalId = setInterval(fetchData, 60000);
 
     return () => clearInterval(intervalId);
   }, []);
