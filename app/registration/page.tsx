@@ -1,10 +1,10 @@
-import RegisterComponent from "@/components/right-bar-sections/RegisterComponent";
+import RegisterSection from "../section/RegisterSection";
 import React from "react";
 
 const page = () => {
   return (
     <>
-      <RegisterComponent />
+      <RegisterSection />
     </>
   );
 };

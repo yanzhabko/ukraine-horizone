@@ -8,7 +8,7 @@ import Lock from "@/images/icons/lock.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-const RegisterComponent: React.FC = () => {
+const RegisterSection: React.FC = () => {
   const [focus, setFocus] = useState<
     null | "userName" | "email" | "password" | "confirmedPassword"
   >(null);
@@ -106,4 +106,4 @@ const RegisterComponent: React.FC = () => {
   );
 };
 
-export default RegisterComponent;
+export default RegisterSection;
