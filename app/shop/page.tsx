@@ -5,7 +5,7 @@ export async function generateMetadata({}) {
   return { title: "Магазин | UkraineHorizon" };
 }
 
-const page = () => {
+const Shop = () => {
   return (
     <>
       <ShopSection />
@@ -13,4 +13,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Shop;
