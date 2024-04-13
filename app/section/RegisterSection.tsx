@@ -1,84 +1,86 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { Input, MantineProvider } from "@mantine/core";
 import ButtonComponent from "@/components/ButtonComponent";
-import User from "@/images/icons/user.svg";
-import Email from "@/images/icons/mail.svg";
-import Lock from "@/images/icons/lock.svg";
-import Image from "next/image";
+import UserIcon from "@/images/icons/user.svg";
+import EmailIcon from "@/images/icons/mail.svg";
+import LockIcon from "@/images/icons/lock.svg";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { InputComponent } from "@/components/InputComponent";
+
+interface FormValues {
+  userName: string;
+  email: string;
+  password: string;
+  confirmedPassword: string;
+}
 
 const RegisterSection: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>();
   const [focus, setFocus] = useState<
-    null | "userName" | "email" | "password" | "confirmedPassword"
+    "userName" | "email" | "password" | "confirmedPassword" | null
   >(null);
+  const [disabled, setDisabled] = useState(false);
+
+  const handleFocus = (
+    field: "userName" | "email" | "password" | "confirmedPassword"
+  ) => {
+    setFocus(field);
+  };
+
+  const onSubmit = (data: FormValues) => {
+    console.log(data);
+  };
+
   return (
     <MantineProvider>
       <div className="bg-white flex justify-center w-auto relative h-auto rounded-2xl pb-8 pt-10 px-2 shadow-lg mt-[25px]">
         <h1 className="bg-orange-300 px-5 py-3 rounded-[2rem] absolute top-[-25px] text-white font-bold">
           Регістрація
         </h1>
-        <form className="flex flex-col gap-[15px] text-end w-[280px] lg:w-[420px]">
-          <Input
-            leftSection={
-              <Image src={User} alt="" className="w-[20px] h-[20px]" />
-            }
+        <form
+          className="flex flex-col gap-[15px] text-end w-[280px] lg:w-[320px]"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <InputComponent
+            name="userName"
+            register={register}
+            icon={UserIcon}
             placeholder="Введіть нікнейм"
-            classNames={{
-              wrapper: `${
-                focus === "userName" && "!border-orange-400"
-              } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[10px] rounded-e-[10px] px-2`,
-              section: "",
-              input:
-                "bg-orange-300 text-white outline-none placeholder:text-white",
-            }}
-            onFocus={() => setFocus("userName")}
+            onFocused={() => handleFocus("userName")}
+            focused={focus}
           />
-          <Input
-            leftSection={
-              <Image src={Email} alt="" className="w-[20px] h-[20px]" />
-            }
+          <InputComponent
+            name="email"
+            register={register}
+            icon={EmailIcon}
             placeholder="Введіть емаіл"
-            classNames={{
-              wrapper: `${
-                focus === "email" && "!border-orange-400"
-              } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[10px] rounded-e-[10px] px-2`,
-              section: "",
-              input:
-                "bg-orange-300 text-white outline-none placeholder:text-white",
-            }}
-            onFocus={() => setFocus("email")}
+            onFocused={() => handleFocus("email")}
+            focused={focus}
           />
-          <Input
-            leftSection={
-              <Image src={Lock} alt="" className="w-[20px] h-[20px]" />
-            }
+          <InputComponent
+            name="password"
+            register={register}
+            icon={LockIcon}
             placeholder="Введіть пароль"
-            classNames={{
-              wrapper: `${
-                focus === "password" && "!border-orange-400"
-              } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[10px] rounded-e-[10px] px-2`,
-              section: "",
-              input:
-                "bg-orange-300 text-white outline-none placeholder:text-white",
-            }}
-            onFocus={() => setFocus("password")}
+            onFocused={() => handleFocus("password")}
+            focused={focus}
           />
-          <Input
-            leftSection={
-              <Image src={Lock} alt="" className="w-[20px] h-[20px]" />
-            }
-            placeholder="Повторіть пароль"
-            classNames={{
-              wrapper: `${
-                focus === "confirmedPassword" && "!border-orange-400"
-              } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[10px] rounded-e-[10px] px-2`,
-              section: "",
-              input:
-                "bg-orange-300 text-white outline-none placeholder:text-white",
-            }}
-            onFocus={() => setFocus("confirmedPassword")}
+          <InputComponent
+            name="confirmedPassword"
+            register={register}
+            icon={LockIcon}
+            placeholder="Введіть нікнейм"
+            onFocused={() => handleFocus("confirmedPassword")}
+            focused={focus}
           />
+
           <div className="flex justify-center items-center gap-[5px] flex-wrap text-center">
             <p className="text-[11px] text-center w-[90%]">
               Реєструючись на нашому проекті, ви автоматично погоджуєтесь з{" "}
@@ -99,6 +101,8 @@ const RegisterSection: React.FC = () => {
             title="Регістрація"
             className="w-[50%] mx-auto"
             typeButton="default"
+            disabled={disabled}
+            onClick={() => handleSubmit(onSubmit)()}
           />
         </form>
       </div>

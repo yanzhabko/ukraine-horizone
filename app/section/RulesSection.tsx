@@ -37,7 +37,7 @@ const RulesCartComponent: React.FC<RuleProps> = ({ rules }) => {
     <div className="px-[40px] bg-white rounded-2xl py-[40px] relative shadow-lg mt-[25px]">
       <div className="absolute bg-orange-300 w-[95%] sm:w-[70%] right-[2.5%] sm:left-[15%] top-[-25px] flex items-center text-center px-[20px] py-[10px] rounded-[20px]">
         <Image src={Scales} alt="Image" className="w-[28px] h-[28px]" />
-        <h1 className="flex-1 text-white font-bold">Правила серверу</h1>
+        <h1 className="flex-1 text-white font-bold">Правила проєкту</h1>
       </div>
       <div className="flex flex-col gap-[30px] w-full">
         {correctRules.map((rule, index: number) => (
@@ -49,7 +49,13 @@ const RulesCartComponent: React.FC<RuleProps> = ({ rules }) => {
               <div className="text-[14px] md:text-[16px] lg:text-[18px]">
                 {index + 1}. {rule.name}
               </div>
-              <Image src={Arrow} alt="Open rules" />
+              <Image
+                src={Arrow}
+                alt="Open rules"
+                className={`${
+                  openRuleIndex === index ? "rotate-0" : "rotate-180"
+                } transform transition duration-500 ease-in-out`}
+              />
             </div>
             {openRuleIndex === index && (
               <div

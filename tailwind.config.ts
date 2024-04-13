@@ -58,7 +58,7 @@ const config: Config = {
       container: {
         center: true,
         padding: {
-          DEFAULT: "15px",
+          DEFAULT: "10px",
           sm: "20px",
           lg: "40px",
           xl: "60px",

@@ -1,10 +1,10 @@
-import DevelopmentComponent from "@/components/DevelopmentComponent";
 import React from "react";
+import ShopSection from "../section/shop-section/ShopSection";
 
 const page = () => {
   return (
     <>
-      <DevelopmentComponent></DevelopmentComponent>
+      <ShopSection />
     </>
   );
 };

@@ -1,31 +1,31 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import ButtonComponent from "@/components/ButtonComponent";
-import User from "@/images/icons/user.svg";
-import Lock from "@/images/icons/lock.svg";
 import Image from "next/image";
 import { Input, MantineProvider } from "@mantine/core";
 import { useForm, SubmitHandler } from "react-hook-form";
+import UserIcon from "@/images/icons/user.svg";
+import LockIcon from "@/images/icons/lock.svg";
+import ButtonComponent from "@/components/ButtonComponent";
+import { InputComponent } from "../InputComponent";
 
-interface LoginProps {
+interface LoginFormValues {
   login: string;
   password: string;
 }
 
 const LoginComponent: React.FC = () => {
-  const { register, handleSubmit } = useForm<LoginProps>();
+  const { register, handleSubmit, reset } = useForm<LoginFormValues>();
   const [focus, setFocus] = useState<null | "login" | "password">(null);
-  const [password, setPassword] = useState("");
-  const [login, setLogin] = useState("");
 
-  const onSubmit: SubmitHandler<LoginProps> = (data) => {
+  const onSubmit: SubmitHandler<LoginFormValues> = (data) => {
     console.log(data);
+    reset();
   };
 
-  // const handleClickRegister = () => {
-  //   setState(true);
-  // };
+  const handleFocus = (field: "login" | "password") => {
+    setFocus(field);
+  };
 
   return (
     <MantineProvider>
@@ -37,38 +37,22 @@ const LoginComponent: React.FC = () => {
           className="flex flex-col gap-[10px] text-end"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex  flex-col gap-4">
-            <Input
-              {...register("login")}
-              leftSection={
-                <Image src={User} alt="" className="w-[20px] h-[20px]" />
-              }
+          <div className="flex flex-col gap-4">
+            <InputComponent
+              name="login"
+              register={register}
+              icon={UserIcon}
               placeholder="Введіть логін"
-              classNames={{
-                wrapper: `${
-                  focus === "login" && "!border-orange-400"
-                } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[10px] rounded-e-[10px] px-3`,
-                section: "",
-                input:
-                  "bg-orange-300 text-white outline-none placeholder:text-white",
-              }}
-              onFocus={() => setFocus("login")}
+              onFocused={() => handleFocus("login")}
+              focused={focus}
             />
-            <Input
-              {...register("password")}
-              leftSection={
-                <Image src={Lock} alt="" className="w-[20px] h-[20px]" />
-              }
+            <InputComponent
+              name="password"
+              register={register}
+              icon={LockIcon}
               placeholder="Введіть пароль"
-              classNames={{
-                wrapper: `${
-                  focus === "password" && "!border-orange-400"
-                } py-2 border border-orange-300 flex items-center gap-[15px] bg-orange-300 rounded-s-[10px] rounded-e-[10px] px-3`,
-                section: "",
-                input:
-                  " bg-orange-300 text-white outline-none placeholder:text-white",
-              }}
-              onFocus={() => setFocus("password")}
+              onFocused={() => handleFocus("password")}
+              focused={focus}
             />
           </div>
           <Link
@@ -89,6 +73,9 @@ const LoginComponent: React.FC = () => {
               title="Увійти"
               className="flex-1"
               typeButton="default"
+              onClick={() => {
+                handleSubmit(onSubmit)();
+              }}
             />
           </div>
         </form>
