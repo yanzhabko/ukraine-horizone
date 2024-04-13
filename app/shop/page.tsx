@@ -1,5 +1,5 @@
 import React from "react";
-import ShopSection from "../section/shop-section/ShopSection";
+import ShopSection from "../section/shops-section/ShopSection";
 
 export async function generateMetadata({}) {
   return { title: "Магазин | UkraineHorizon" };
