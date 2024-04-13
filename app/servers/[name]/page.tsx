@@ -15,7 +15,7 @@ function getServer(name: string) {
   return res;
 }
 
-export default function Servers({ params }: { params: any }) {
+export default function page({ params }: { params: any }) {
   const server = getServer(params.name);
 
   if (server.length === 0) {
