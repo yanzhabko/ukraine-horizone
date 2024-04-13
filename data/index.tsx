@@ -14,7 +14,7 @@ export const headerLinks = [
   { href: "/", title: "Головна", icon: Castle },
   { href: "/rules", title: "Правила", icon: Scales },
   { href: "/servers", title: "Сервери", icon: Dice },
-  { href: "/shop", title: "Магазин", icon: Cart },
+  { href: "/shops", title: "Магазин", icon: Cart },
 ];
 
 export const serversMinecraft = [
@@ -491,14 +491,14 @@ export const news = [
 
 export const categories = [
   {
-    href: "/shop?tab=privileges",
+    href: "/shops?tab=privileges",
     image: Crows,
     alt: "Privileges shop",
     title: "Магазин привілегій",
     subTitle: "Придбай привілегію і стань найкращим гравцем на сервері!",
   },
   {
-    href: "/shop?tab=items",
+    href: "/shops?tab=items",
     image: Pickaxe,
     alt: "Objects shop",
     title: "Магазин ресурсів",
