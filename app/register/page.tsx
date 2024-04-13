@@ -5,7 +5,7 @@ export async function generateMetadata({}) {
   return { title: "Регістрація | UkraineHorizon" };
 }
 
-const Register = () => {
+const page = () => {
   return (
     <>
       <RegisterSection />
@@ -13,4 +13,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default page;

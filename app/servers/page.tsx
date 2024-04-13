@@ -5,7 +5,7 @@ export async function generateMetadata({}) {
   return { title: "Cервера | UkraineHorizon" };
 }
 
-const Servers = () => {
+const page = () => {
   return (
     <>
       <ServerMonitoringSection />
@@ -13,4 +13,4 @@ const Servers = () => {
   );
 };
 
-export default Servers;
+export default page;

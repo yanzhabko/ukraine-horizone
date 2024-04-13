@@ -1,11 +1,11 @@
 import React from "react";
-import ShopSection from "../section/shops-section/ShopSection";
+import ShopSection from "../section/ShopSection";
 
 export async function generateMetadata({}) {
   return { title: "Магазин | UkraineHorizon" };
 }
 
-const Shop = () => {
+const page = () => {
   return (
     <>
       <ShopSection />
@@ -13,4 +13,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default page;
