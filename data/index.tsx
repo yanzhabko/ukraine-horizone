@@ -3,7 +3,8 @@ import Scales from "@/images/icons/scales.svg";
 import Dice from "@/images/icons/dice.svg";
 import Cart from "@/images/icons/cart.svg";
 import ANIGMA from "../images/servers/anigma.png";
-
+import Crows from "@/images/icons/сrown.svg";
+import Pickaxe from "@/images/icons/pickaxe.svg";
 import Grass from "@/images/servers/icons/grass.png";
 import OtherWorld from "@/images/servers/icons/nether.webp";
 import Sword from "@/images/servers/icons/sword.webp";
@@ -485,5 +486,22 @@ export const news = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iusto.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iustoLorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iustoLorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iustoLorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iusto Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iusto Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iustoLorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iusto Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iusto Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iusto Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iusto Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nobis voluptates eaque reiciendis dicta labore, autem quia magni quas saepe veritatis minus at dolor unde mollitia cumque iure repellendus iusto",
     image:
       "https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Update-Aquatic_1280x768.jpg",
+  },
+];
+
+export const categories = [
+  {
+    href: "/shop?tab=privileges",
+    image: Crows,
+    alt: "Privileges shop",
+    title: "Магазин привілегій",
+    subTitle: "Придбай привілегію і стань найкращим гравцем на сервері!",
+  },
+  {
+    href: "/shop?tab=items",
+    image: Pickaxe,
+    alt: "Objects shop",
+    title: "Магазин ресурсів",
+    subTitle: "Набридло копати руди, зайди в наш магазин і придбай їх там!",
   },
 ];

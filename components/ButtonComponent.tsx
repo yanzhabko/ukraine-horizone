@@ -13,6 +13,7 @@ interface ButtonProps {
   typeButton: "default" | "download" | "news" | "servers";
   tag?: "a" | "button";
   href?: string;
+  disabled?: boolean;
 }
 const ButtonComponent: React.FC<ButtonProps> = ({
   title,
@@ -23,6 +24,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
   typeButton,
   tag = "button",
   href,
+  disabled,
 }) => {
   const Tag = tag;
   const buttonContent = () => {
@@ -32,7 +34,9 @@ const ButtonComponent: React.FC<ButtonProps> = ({
           type={type}
           onClick={onClick}
           href={href}
-          className={`${className} active:opacity-90 cursor-pointer py-2 text-8 text-gray-600 bg-neutral-300 rounded-[10px]`}
+          className={`${className} ${
+            disabled == false && "cursor-not-allowed"
+          } hover:opacity-90 active:opacity-90 cursor-pointer py-2 text-8 text-gray-600 bg-neutral-300 rounded-[10px]`}
         >
           {title}
         </Tag>
@@ -44,7 +48,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
           onClick={onClick}
           href={href}
           download
-          className={`${className} active:opacity-90 cursor-pointer flex justify-center gap-[15px] items-center py-3 text-8 text-orange-400 font-bold bg-white rounded-[10px]`}
+          className={`${className} hover:opacity-90 active:opacity-90 cursor-pointer flex justify-center gap-[15px] items-center py-3 text-8 text-orange-300 font-bold bg-white rounded-[10px]`}
         >
           {IconComponent && (
             <IconComponent
@@ -62,7 +66,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
         onClick={onClick}
         href={href}
         download
-        className={`${className} text-orange-300 py-2 bg-red-500`}
+        className={`${className} hover:opacity-90 text-orange-300 py-2 bg-red-500`}
       >
         {title}
       </Tag>;
@@ -72,7 +76,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
           type={type}
           onClick={onClick}
           href={href}
-          className={`${className} active:opacity-80 cursor-pointer flex justify-center gap-[10px] items-center px-3 py-3 text-[12px] xl:text-[16px] text-white font-bold bg-orange-300 rounded-[15px]`}
+          className={`${className} hover:opacity-90 active:opacity-80 cursor-pointer flex justify-center gap-[10px] items-center px-3 py-3 text-[12px] xl:text-[16px] text-white font-bold bg-orange-300 rounded-[15px]`}
         >
           {title}
           {IconComponent && (

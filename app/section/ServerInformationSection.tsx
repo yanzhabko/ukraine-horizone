@@ -50,7 +50,7 @@ const ServerInformationSection: React.FC<ServerInformationProps> = ({
               <Image
                 src={item.icon}
                 alt="Icon"
-                className="w-[50%] my-[20px] mx-[20%]"
+                className="w-[25%] md:w-[50%] my-[20px] mx-[20%]"
               />
               <p className="text-[12px] xl:text-[15px] font-bold text-orange-300">
                 {item.information}

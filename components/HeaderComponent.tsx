@@ -13,8 +13,8 @@ const HeaderComponent = () => {
   const pathname = usePathname();
 
   return (
-    <header className="container flex flex-col items-center gap-[50px]">
-      <div className="pt-[40px] flex items-center justify-center md:justify-between w-full">
+    <header className="container flex flex-col items-center gap-[30px] md:gap-[50px]">
+      <div className="pt-[20px] md:pt-[40px] flex items-center justify-center md:justify-between w-full">
         <div className="hidden md:block left-[-3px] absolute">
           <Image
             src={Circule}
@@ -35,7 +35,7 @@ const HeaderComponent = () => {
           <Image
             src={Logo}
             alt="Logo"
-            className="h-[180px] lg:h-[250px] xl:h-[350px] w-auto drop-shadow-2xl"
+            className="h-[180px] lg:h-[250px] xl:h-[300px] w-auto drop-shadow-2xl"
           />
         </Link>
         <div className="hidden md:flex flex-col gap-[3px]">
@@ -74,8 +74,8 @@ const HeaderComponent = () => {
             key={index}
             className={`${
               pathname === item.href &&
-              "before:opacity-100 before:animate-slide-up"
-            } flex flex-col items-center relative before:opacity-0 before:absolute before:w-[80%] before:h-[3px] before:bottom-[-5px] before:bg-orange-400`}
+              "before:opacity-100 before:animate-line-slide-up"
+            } flex flex-col items-center relative hover:before:opacity-100 hover:before:animate-line-slide-up hover:before:absolute hover:before:w-[80%] hover:before:h-[3px] hover:before:bottom-[-5px] hover:before:bg-orange-300  before:opacity-0 before:absolute before:w-[80%] before:h-[3px] before:bottom-[-5px] before:bg-orange-300`}
           >
             <Image
               src={item.icon}
