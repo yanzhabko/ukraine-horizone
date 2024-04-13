@@ -53,7 +53,7 @@ const RulesCartComponent: React.FC<RuleProps> = ({ rules }) => {
                 src={Arrow}
                 alt="Open rules"
                 className={`${
-                  openRuleIndex === index ? "rotate-0" : "rotate-180"
+                  openRuleIndex === index ? "rotate-180" : "rotate-0"
                 } transform transition duration-500 ease-in-out`}
               />
             </div>

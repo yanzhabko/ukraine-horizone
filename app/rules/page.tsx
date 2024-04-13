@@ -6,7 +6,7 @@ export async function generateMetadata({}) {
   return { title: "Правила | UkraineHorizon" };
 }
 
-const page = () => {
+const Rules = () => {
   return (
     <>
       <RulesSection rules={rules} />
@@ -14,4 +14,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Rules;
