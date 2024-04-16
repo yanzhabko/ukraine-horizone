@@ -2,6 +2,9 @@
 import React from "react";
 import SelectCategoriesSection from "./SelectCategoriesSection";
 import { useSearchParams } from "next/navigation";
+import PrivilegesShopSection from "./PrivilegesShopSection";
+
+
 
 const ShopSection = () => {
   const searchParams = useSearchParams();
@@ -19,7 +22,7 @@ const ShopSection = () => {
         <h1 className="flex-1 text-white font-bold">{title}</h1>
       </div>
       {params === null && <SelectCategoriesSection />}
-      {params === "privileges"}
+      {params === "privileges" && <PrivilegesShopSection />}
       {params === "items"}
     </div>
   );

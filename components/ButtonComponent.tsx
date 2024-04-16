@@ -10,7 +10,7 @@ interface ButtonProps {
     alt?: string;
     className?: string;
   }>;
-  typeButton: "default" | "download" | "news" | "servers";
+  typeButton: "default" | "download" | "news" | "servers" | "shop";
   tag?: "a" | "button";
   href?: string;
   disabled?: boolean;
@@ -86,6 +86,17 @@ const ButtonComponent: React.FC<ButtonProps> = ({
               className="w-[14px] h-[14px] xl:w-[18px] lg:h-[18px] animate-bounce-x"
             />
           )}
+        </Tag>
+      );
+    } else if (typeButton === "shop") {
+      return (
+        <Tag
+          type={type}
+          onClick={onClick}
+          href={href}
+          className={`${className} hover:opacity-90 active:opacity-80 cursor-pointer flex justify-center gap-[10px] items-center px-3 py-3 text-[12px] xl:text-[16px] text-white font-bold bg-orange-300 rounded-[10px]`}
+        >
+          {title}
         </Tag>
       );
     } else {

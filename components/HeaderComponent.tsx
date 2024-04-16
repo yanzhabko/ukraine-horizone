@@ -21,7 +21,7 @@ const HeaderComponent = () => {
             alt="Image"
             className="h-[150px] lg:h-[200px] xl:h-[250px] w-auto z-0"
           />
-          <div className="absolute w-auto left-[60%] lg:left-[80%] top-[30%] h-auto bg-transparent z-10">
+          <div className="absolute w-auto left-[60%] lg:left-[80%] top-[30%] h-auto bg-transparent z-1">
             <p className="w-[170px] lg:w-[260px] text-[18px] lg:text-[24px] xl:text-[28px] text-white font-light">
               Приєднуйся до гри
             </p>
