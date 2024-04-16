@@ -25,6 +25,10 @@ export const serversMinecraft = [
   },
 ];
 
+export const privilege = {
+
+}
+
 export const serversDescription = [
   {
     nameServer: "anigma",

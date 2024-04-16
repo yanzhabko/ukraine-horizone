@@ -19,7 +19,7 @@ const SelectCategoriesSection = () => {
           />
         ))}
       </div>
-      <p className="rounded-[8px] relative text-center mx-auto mt-[40px] py-[25px] px-[15px] xl:py-[20px] xl:px-[15px] h-auto bg-gradient-to-t w-full md:bg-gradient-to-r from-emerald-300 to-yellow-200 md:w-[90%]">
+      <p className="rounded-[8px] relative text-center mx-auto mt-[40px] py-[25px] px-[15px] xl:py-[20px] xl:px-[15px] h-auto bg-gradient-to-t w-full md:bg-gradient-to-r to-orange-300 from-yellow-200 md:w-[90%]">
         <Image
           src={Emoji}
           alt="Emoji"

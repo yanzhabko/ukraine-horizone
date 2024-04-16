@@ -41,6 +41,14 @@ const config: Config = {
             transform: "translateX(-4px)",
           },
         },
+        pulse: {
+          "0%, 100%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0.95",
+          },
+        },
       },
       animation: {
         "bounce-x": "bounce-x 1s infinite alternate",
