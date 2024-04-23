@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { Input, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import { useForm, SubmitHandler } from "react-hook-form";
 import UserIcon from "@/images/icons/user.svg";
 import LockIcon from "@/images/icons/lock.svg";

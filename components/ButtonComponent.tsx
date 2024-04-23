@@ -46,8 +46,8 @@ const ButtonComponent: React.FC<ButtonProps> = ({
         <Tag
           type={type}
           onClick={onClick}
+          target="blank"
           href={href}
-          download
           className={`${className} hover:opacity-90 active:opacity-90 cursor-pointer flex justify-center gap-[15px] items-center py-3 text-8 text-orange-300 font-bold bg-white rounded-[10px]`}
         >
           {IconComponent && (
@@ -65,7 +65,6 @@ const ButtonComponent: React.FC<ButtonProps> = ({
         type={type}
         onClick={onClick}
         href={href}
-        download
         className={`${className} hover:opacity-90 text-orange-300 py-2 bg-red-500`}
       >
         {title}

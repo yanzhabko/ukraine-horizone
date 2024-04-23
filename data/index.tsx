@@ -1,7 +1,6 @@
-import Castle from "@/images/icons/castle.svg";
-import Scales from "@/images/icons/scales.svg";
-import Dice from "@/images/icons/dice.svg";
-import Cart from "@/images/icons/cart.svg";
+import { FaHome, FaCoins } from "react-icons/fa";
+import { IoNewspaper } from "react-icons/io5";
+import { AiFillDatabase } from "react-icons/ai";
 import ANIGMA from "../images/servers/anigma.png";
 import Crows from "@/images/icons/сrown.svg";
 import Pickaxe from "@/images/icons/pickaxe.svg";
@@ -11,10 +10,10 @@ import Sword from "@/images/servers/icons/sword.webp";
 import World from "@/images/servers/icons/world.webp";
 
 export const headerLinks = [
-  { href: "/", title: "Головна", icon: Castle },
-  { href: "/rules", title: "Правила", icon: Scales },
-  { href: "/servers", title: "Сервери", icon: Dice },
-  { href: "/shop", title: "Магазин", icon: Cart },
+  { href: "/", title: "Головна", icon: FaHome },
+  { href: "/rules", title: "Правила", icon: IoNewspaper },
+  { href: "/servers", title: "Сервери", icon: AiFillDatabase },
+  { href: "/shop", title: "Магазин", icon: FaCoins },
 ];
 
 export const serversMinecraft = [
@@ -25,9 +24,7 @@ export const serversMinecraft = [
   },
 ];
 
-export const privilege = {
-
-}
+export const privilege = {};
 
 export const serversDescription = [
   {

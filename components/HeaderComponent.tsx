@@ -47,20 +47,20 @@ const HeaderComponent = () => {
               typeButton="download"
               image={FaWindows}
               title="Windows"
-              href="@/images/launcher/Ukraine_Horizon.exe"
+              href="https://drive.google.com/file/d/1nZVrY5VtUCLZFDI6PqyE_3TQYws4G-WC/view?usp=sharing"
               tag="a"
               className=""
             />
-            <ButtonComponent
+            {/* <ButtonComponent
               typeButton="download"
               image={FaLinux}
               title="Linux / Mac OS"
               tag="a"
-            />
+            /> */}
           </div>
         </div>
         <div className="hidden absolute right-[10px] top-[5px] md:flex gap-[10px]">
-          <Link href="https://discord.gg/xtGnGvrR" target="_blank">
+          <Link href="https://discord.gg/6QyZgXYr" target="_blank">
             <FaDiscord className=" text-white w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] " />
           </Link>
           <Link href="https://t.me/Ukrainehorizon" target="_blank">
@@ -70,22 +70,17 @@ const HeaderComponent = () => {
       </div>
       <ul className="w-full flex items-center justify-center gap-[20px] sm:gap-[45px] lg:gap-[35px]">
         {headerLinks.map((item, index) => (
-          <li
-            key={index}
-            className={`${
-              pathname === item.href &&
-              "before:opacity-100 before:animate-line-slide-up"
-            } flex flex-col items-center relative hover:before:opacity-100 hover:before:animate-line-slide-up hover:before:absolute hover:before:w-[80%] hover:before:h-[3px] hover:before:bottom-[-5px] hover:before:bg-orange-300  before:opacity-0 before:absolute before:w-[80%] before:h-[3px] before:bottom-[-5px] before:bg-orange-300`}
-          >
-            <Image
-              src={item.icon}
-              alt="icons"
-              className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]"
-            />
+          <li key={index} className="flex flex-col items-center w-auto">
+            {item.icon && (
+              <item.icon className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px] text-orange-300 opacity-95" />
+            )}
             <Link
               key={index}
               href={item.href}
-              className="text-white font-bold text-[14px] sm:text-[16px] lg:text-[22px] xl:text-[28px]"
+              className={`${
+                pathname === item.href &&
+                "before:opacity-100 before:animate-line-slide-up"
+              } w-full  text-white font-bold text-[14px] sm:text-[16px] lg:text-[22px] xl:text-[28px] flex justify-center relative hover:before:opacity-100 hover:before:animate-line-slide-up hover:before:absolute hover:before:w-full hover:before:h-[3px] hover:before:bottom-[-3px] hover:before:bg-orange-300 before:opacity-0 before:absolute before:w-full before:h-[3px] before:bottom-[-3px] before:bg-orange-300`}
             >
               {item.title}
             </Link>
