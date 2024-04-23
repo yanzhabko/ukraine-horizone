@@ -3,7 +3,7 @@ import RulesSection from "../section/RulesSection";
 import { rules } from "@/data";
 
 export async function generateMetadata({}) {
-  return { title: "Правила | UkraineHorizon" };
+  return { title: "Правила | ukrainehorizon" };
 }
 
 const page = () => {

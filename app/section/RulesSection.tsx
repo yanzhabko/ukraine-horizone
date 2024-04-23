@@ -78,10 +78,10 @@ const RulesCartComponent: React.FC<RuleProps> = ({ rules }) => {
             )}
           </div>
         ))}
-        <div className="flex flex-col gap-[5px]">
+        <div className="flex flex-col gap-[5px] relative">
           {lastRule?.descriptions.map((item, index) => (
             <p
-              className="text-[14px] md:text-[16px] lg:text-[18px]"
+              className="text-[14px] md:text-[16px] lg:text-[18px] text-orange-300 start-"
               key={index}
             >
               {item.title}

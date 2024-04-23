@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 interface PrivilegeCardProps {
   name: string;
@@ -21,12 +20,12 @@ const PrivilegeCardComponent: React.FC<PrivilegeCardProps> = ({
     <button
       onClick={onClick}
       className={`${
-        name === "Vip"
-          ? "to-orange-300 from-yellow-200"
-          : name === "Premium"
-          ? "to-emerald-400 from-green-300"
+        name === "Віп"
+          ? "to-orange-300 from-yellow-100"
+          : name === "Преміум"
+          ? "to-emerald-500 from-green-200"
           : "to-purple-500 from-violet-300"
-      } scale-95 hover:scale-100 relative bg-gradient-to-t rounded-[10px] gap-[5px] w-full sm:w-[48%] md:w-[45%] lg:w-[48%] xl:w-auto flex flex-col items-center py-[20px] animate-pulse`}
+      } scale-95 hover:scale-100 relative bg-gradient-to-b rounded-[10px] gap-[5px] w-full sm:w-[48%] md:w-[32%] lg:w-[48%] xl:w-[32%] flex flex-col items-center py-[20px] animate-pulse`}
     >
       <Image
         src={image}
@@ -37,7 +36,7 @@ const PrivilegeCardComponent: React.FC<PrivilegeCardProps> = ({
         {price} (₴)
       </p>
       <div className="flex flex-col items-center justify-center gap-[8px]">
-        <p className="text-[18px] font-bold text-black">{name}</p>
+        <p className="text-[18px] font-bold text-white">{name}</p>
       </div>
     </button>
   );

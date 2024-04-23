@@ -2,7 +2,7 @@ import React from "react";
 import ShopSection from "../section/ShopSection";
 
 export async function generateMetadata({}) {
-  return { title: "Магазин | UkraineHorizon" };
+  return { title: "Магазин | ukrainehorizon" };
 }
 
 const page = () => {

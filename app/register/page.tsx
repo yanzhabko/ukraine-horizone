@@ -2,7 +2,7 @@ import React from "react";
 import RegisterSection from "../section/RegisterSection";
 
 export async function generateMetadata({}) {
-  return { title: "Регістрація | UkraineHorizon" };
+  return { title: "Регістрація | ukrainehorizon" };
 }
 
 const page = () => {

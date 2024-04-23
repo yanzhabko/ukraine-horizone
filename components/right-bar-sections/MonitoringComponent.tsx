@@ -1,9 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import MonitoringCartComponent from "./MonitoringCartComponent";
 import { serversMinecraft } from "@/data";
-import { fetchServerStatus } from "@/service/fetchServerStatus";
+import { fetchServerStatus } from "@/service/fetchServerStatus";``
 
 const MonitoringComponent = () => {
   const [onlineUsers, setOnlineUsers] = useState(0);

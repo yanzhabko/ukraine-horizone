@@ -1,6 +1,7 @@
 import React from "react";
 import LoginComponent from "@/components/right-bar-sections/LoginComponent";
 import MonitoringComponent from "@/components/right-bar-sections/MonitoringComponent";
+import SocialNetworkComponent from "@/components/right-bar-sections/SocialNetworkComponent";
 
 const RightNavigation = () => {
   return (
@@ -8,6 +9,7 @@ const RightNavigation = () => {
       <nav className="flex flex-col gap-[70px]">
         <LoginComponent />
         <MonitoringComponent />
+        <SocialNetworkComponent />
       </nav>
     </aside>
   );
